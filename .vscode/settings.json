@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.root": "/",
+    "liveServer.settings.https": {
+      "enable": true,
+      "cert": "/Users/minec/Desktop/cw1/localhost.pem",
+      "key": "/Users/minec/Desktop/cw1/localhost-key.pem",
+      "passphrase": "yourpassphrase"
+    }
+  }
