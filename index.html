@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,28 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
-    <header>
-        <h1>Moja pierwsza aplikacja PWA</h1>
-    </header>
-    
-<section id="login" class="hidden">
-    <h2>Zaloguj się</h2>
-    <form id="login-form">
-        <input type="text" id="username" placeholder="Nazwa użytkownika" required>
-        <input type="password" id="password" placeholder="Hasło" required>
-        <button type="submit" name="login">Zaloguj się</button>
-    </form>
-</section>
-    <div id="dashboardContainer" class="hidden"></div>
+    <div id="login">
+        <section id="login-screen">
+            <h1>Moja pierwsza aplikacja PWA</h1>
+            <form id="register-form">
+                <label for="username">Nazwa:</label>
+                <input type="text" id="username" name="username" required>
+                <p></p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Zarejestruj</button>
+            </form>
+        </section>
+    </div>
+
+    <section id="dashboard-screen" style="display: none;">
+        <h1>Witaj w dashboardzie!</h1>
+        <button id="logout-button">Wyloguj się</button>
+    </section>
 
     <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(function() {
-                    console.log('Service Worker zarejestrowany poprawnie.');
-                })
-                .catch(function(error) {
-                    console.error('Błąd podczas rejestracji Service Workera:', error);
-                });
-        }
-    </script>
 </body>
+
 </html>
